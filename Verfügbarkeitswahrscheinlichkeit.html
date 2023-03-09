@@ -84,7 +84,7 @@
           if ((MAPBOX_TOKEN || '') === '' || MAPBOX_TOKEN === 'PROVIDE_MAPBOX_TOKEN') {
             alert(WARNING_MESSAGE);
           }
-
+            
           /** STORE **/
           const reducers = (function createReducers(redux, keplerGl) {
             return redux.combineReducers({
@@ -92,7 +92,13 @@
               keplerGl: keplerGl.keplerGlReducer.initialState({
                 uiState: {
                   readOnly: true,
-                  currentModal: null
+                  currentModal: null,
+                  mapControls: {
+                    mapLegend: {
+                      show: true,
+                      active: true
+                    }
+                  }
                 }
               })
             });
