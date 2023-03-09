@@ -102,6 +102,7 @@
                 }
               })
             });
+          }(Redux, KeplerGl));
 
           const middleWares = (function createMiddlewares(keplerGl) {
             return keplerGl.enhanceReduxMiddleware([
