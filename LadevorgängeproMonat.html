@@ -92,11 +92,16 @@
               keplerGl: keplerGl.keplerGlReducer.initialState({
                 uiState: {
                   readOnly: true,
-                  currentModal: null
+                  currentModal: null,
+                  mapControls: {
+                    mapLegend: {
+                      show: true,
+                      active: true
+                    }
+                  }
                 }
               })
             });
-          }(Redux, KeplerGl));
 
           const middleWares = (function createMiddlewares(keplerGl) {
             return keplerGl.enhanceReduxMiddleware([
